@@ -1,8 +1,48 @@
-# Getting Started with Create React App
+# Add Performance App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Basic Structure
+### Performance Component
+It displays detailed information about each recorded video, such as the title, recording date, duration, and a preview or thumbnail.
+*Functionality:*
+- The Performance component was created to individually display each video recording.
+- It receives video data from the VideoContext, including the video's URL, title, recording date, and duration.
+- The video duration is formatted for readable display
+
+### Performances Component
+It lists all the recorded performances, presenting each as a card or list item within the UI.
+*Functionality
+- The Performances component consumes VideoContext to fetch the list of recorded videos.
+- It maps over the array of video objects, rendering a Performance component for each one to display a summary of the video details.
+
+### Video Recording and Context Management
+It enables video recording within the application and manage the recorded video data globally.
+*Functionality:*
+- Implemented a VideoRecorder component that allows users to record videos with audio and preview them in real-time.
+- Integrated VideoContext to manage the global state of recorded videos, enabling sharing of video data across different components of the application.
+- Videos are added to the global context upon saving, with metadata like title, date, duration, and a generated URL for the video blob.
+
+### Modal Component
+It provides a reusable modal component for displaying content overlays within the application.
+*Functionality:*
+- Created a Modal component that can be used to display arbitrary content in a modal dialog.
+- The component is controlled via a show prop, allowing it to be toggled visible or hidden, and includes an onClose callback to handle modal closure actions.
+- Integrated CSS for the modal to ensure it visually stands out from the rest of the page content and prevents background scrolling when open.
+
+### SVG Handling with SVGR
+It efficiently incorporates SVG graphics into the React application.
+*Functionality:*
+- Utilized SVGR to transform SVG files into React components, allowing for direct rendering and manipulation of SVGs within the JSX code.
+- This approach enables the application of dynamic styles and properties to SVG elements, enhancing the interactivity and visual integration of graphics within the application.
+
+
+## TODO's:
+- Review why the SVR template is not working.
+- Refactor lots of components, they work but still need some consistency and flexibility.
+- Implement the actual edit and remove functionality. So, no CRUD at all for now.
+- Implement an actual colors variable system, for this MVP I just added color values on any format I found them.
+- More testing, the app worked... Once.
+
 
 In the project directory, you can run:
 
