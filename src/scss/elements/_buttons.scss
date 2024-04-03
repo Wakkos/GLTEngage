@@ -1,0 +1,44 @@
+.btn, button {
+  cursor: pointer;
+  height: var(--gap-40);
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding: 0.4em 2em;
+  line-height: 1.6;
+  white-space: nowrap;
+  background-color: white;
+  color: var(--color-button-text);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-primary);
+  letter-spacing: 0.025em;
+  border-radius: var(--border-radius-small);
+  transition: all 0.2s ease-in;
+  border: 1px solid var(--color-button-border);
+  vertical-align: bottom;
+
+  + .btn, + button {
+    margin-left: var(--space-16);
+  }
+
+  &__cta {
+    background: transparent linear-gradient(270deg, var(--color-primary-teal) 0%, var(--color-primary) 100%) 0% 0% no-repeat padding-box;
+        color: white;
+    border-color: var(--color-primary);
+  }
+
+  &__alert {
+    background-color: var(--alert);
+    color: white;
+    border-color: var(--alert);
+  }
+
+  &__icon {
+    padding: 0.5em;
+    border: none;
+  }
+}

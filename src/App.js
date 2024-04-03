@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Performance from './components/performance/Performance';
+import Performances from './components/performance/Performances';
+import VideoRecorder from './components/performance/record/Record';
+import { VideoProvider } from './util/VideoContext';
+import Modal from './components/modal/Modal';
+import './scss/style.scss';
 
 function App() {
+  const [activeModal, setActiveModal] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VideoProvider>
+
+      <Modal show={activeModal === 'newPerformanceModal'} onClose={() => setActiveModal(null)}>
+        <VideoRecorder />
+      </Modal>
+
+      <div className="App">
+        <h1>Your Performances</h1>
+        <button onClick={() => setActiveModal('newPerformanceModal')}>Add new performance</button>
+
+          <Performances>
+            <Performance />
+          </Performances>
+      </div>
+    </VideoProvider>
   );
 }
 

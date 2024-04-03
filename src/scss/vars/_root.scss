@@ -1,0 +1,85 @@
+///// STYLES TO BE GLOBAL
+:root {
+  //-----> Colors
+
+  //TODO: modernise and standarise all colors to something modern like LCH: (https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/)
+  --color-primary: rgb(2, 144, 135);
+  --color-primary-teal: hsla(177.32, 47.86%, 45.88%, 1);
+
+  --grey-mid: #969CA3;
+  --grey-light: #D7D7D7;
+  --grey-light-transparent: rgba(48, 56, 79, 0.20);
+  --grey-dark: #707070;
+  --black-light: hsl(0, 0%, 9%);
+  --black-lighter: hsl(0, 0%, 15%);
+  --black: #010206;
+  --white: #FFFFFF;
+  --red: rgb(218,79,73);
+  --shadow-color: rgba(68, 123, 154, 0.35);
+
+
+
+
+  //-----> Backgrounds
+  --bg-color: var(--white);
+
+
+  //-----> Buttons
+  --color-button-text: var(--black-light);
+  --color-button-border: var(--grey-dark) ;
+
+
+  //-----> Textures
+  --alert: var(--red);
+
+
+  //-----> SHADOWS
+  --shadow: 0px 0px 10px 0px var(--shadow-color);
+
+
+
+  //---> Typography
+  --color-text: var(--black);
+  --color-text-muted: var(--grey-mid);
+
+  --font-family: "Reddit Mono", monospace;
+
+  //-----> Font Sizes
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-22: 22px;
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+  --font-size-38: 38px;
+  --font-size-44: 44px;
+
+  //-----> Font Weight
+  --font-weight-normal: 200;
+  --font-weight-bold: 900;
+
+
+
+
+
+  //-----> GAPS & SPACES
+  --gap: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+
+  --space-section: 80px;
+
+  --border-radius: 16px;
+  --border-radius-small: 4px;
+
+
+  --column-width: 450px;
+  @include respond-to(twelve) {
+    --column-width: 100%;
+  }
+}

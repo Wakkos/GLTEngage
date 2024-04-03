@@ -1,0 +1,57 @@
+.performance-card {
+  position: relative;
+  max-width: 250px;
+  border: 1px solid var(--grey-light);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-small);
+
+  &__content {
+    padding: var(--space-16);
+  }
+
+    &__image {
+      object-fit: cover;
+    }
+
+    &__title {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-22);
+      line-height: 1;
+      margin-bottom: var(--gap);
+      margin-top: 0;
+    }
+
+    &__date {
+      color: var(--grey-dark);
+    }
+
+    &__duration {
+      margin: -1.3em var(--space-16) 0 0;
+      text-align: right;
+    }
+
+  &__actions {
+    position: absolute;
+    inset: 0 0 auto auto;
+    display: flex;
+    gap: var(--gap);
+    background-color: rgba(0,0,0, 0.5);
+    color: var(--white);
+    padding: var(--gap);
+    border-radius: var(--border-radius-small);
+    font-size: 1em;
+
+    // TODO: Not Cool. Optimise SVG to adapt to currentColor
+    svg {
+      fill: white
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-16);
+    justify-content: center;
+  }
+
+}
